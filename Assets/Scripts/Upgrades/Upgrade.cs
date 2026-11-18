@@ -22,5 +22,7 @@ public abstract class Upgrade : MonoBehaviour
         }
     }
 
+    protected abstract void UpdatePrice();
+
     protected abstract void BuyUpgrade();
 }
