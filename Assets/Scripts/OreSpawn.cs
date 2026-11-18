@@ -11,6 +11,8 @@ public class OreSpawn : MonoBehaviour
     [SerializeField]
     private float spawnTime;
 
+    private float startSpawnTime;
+
     private int spawnCount;
 
     [SerializeField]
@@ -18,10 +20,14 @@ public class OreSpawn : MonoBehaviour
 
     private float spawnTimer;
 
+    public static OreSpawn instance;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         spawnTimer = Time.time;
+        instance = this;
+        startSpawnTime = spawnTime;
     }
 
     // Update is called once per frame
@@ -39,9 +45,9 @@ public class OreSpawn : MonoBehaviour
         spawnCount--;
     }
 
-    public void setSpawnTime(float pSpawnTime)
+    public void setSpawnTime(int upgradeCount)
     {
-        spawnTime = pSpawnTime;
+        spawnTime = startSpawnTime - (upgradeCount * 0.3f);
     }
 
     public void setMaxCount(int maxCount)
