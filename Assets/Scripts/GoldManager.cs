@@ -1,8 +1,9 @@
+using TMPro;
 using UnityEngine;
 
 public class GoldManager : MonoBehaviour
 {
-    private GoldManager instance;
+    private static GoldManager instance;
 
     
     [SerializeField] private float gold;
@@ -10,8 +11,9 @@ public class GoldManager : MonoBehaviour
 
     [SerializeField] private float critChance;
     [SerializeField] private float critAmount;
+    [SerializeField] private TextMeshProUGUI text;
 
-    public GoldManager Instance {  get { return instance; } }
+    public static GoldManager Instance {  get { return instance; } }
 
     private void Start()
     {
@@ -19,6 +21,7 @@ public class GoldManager : MonoBehaviour
             instance = this;
 
         goldMult = 1;
+        UpdateGold();
     }
 
     public void AddGold(float goldAmount)
@@ -26,16 +29,18 @@ public class GoldManager : MonoBehaviour
         int randomRoll = Random.Range(1, 100);
         goldAmount *= goldMult;
 
-        if (critChance <= randomRoll)
+        if (critChance >= randomRoll)
             goldAmount *= critAmount;
 
         gold += goldAmount;
         Debug.Log(gold);
+        UpdateGold();
     }
 
     public void ReduceGold(float goldAmount)
     {
         gold -= goldAmount;
+        UpdateGold();
     }
 
     public void IncreaseCritChance(int upgradeCount)
@@ -53,5 +58,10 @@ public class GoldManager : MonoBehaviour
     public float GetGoldAmount()
     {
         return gold;
+    }
+
+    private void UpdateGold()
+    {
+        text.text = "Gold:" + gold;
     }
 }

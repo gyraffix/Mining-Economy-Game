@@ -5,6 +5,8 @@ public class DummyGoldManager : MonoBehaviour
 {
     public void CallGoldManager()
     {
-        
+        GoldManager.Instance.AddGold(1);
+        Destroy(this.gameObject);
+        OreSpawn.instance.DecreaseSpawnCount();
     }
 }
