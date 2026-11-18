@@ -43,16 +43,21 @@ public class GoldManager : MonoBehaviour
         UpdateGold();
     }
 
+    public void IncreaseGoldMult(int upgradeCount)
+    {
+        goldMult = upgradeCount + 1;
+    }
+
     public void IncreaseCritChance(int upgradeCount)
     {
 
-        //critChance += critChanceIncrease;
+        critChance = upgradeCount + 1;
     }
 
     public void IncreaseCritAmount(int upgradeCount)
     {
 
-        //critAmount += critAmountIncrease;
+        critAmount = 10 * (1 + upgradeCount);
     }
 
     public float GetGoldAmount()
