@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 83d3d7399867a3942833245379e43ebc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 267961
+  packageName: 'Starter Assets: Character Controllers | URP'
+  packageVersion: 2.0.2
+  assetPath: Assets/StarterAssets/ThirdPersonController/Scripts/BasicRigidBodyPush.cs
+  uploadId: 721456

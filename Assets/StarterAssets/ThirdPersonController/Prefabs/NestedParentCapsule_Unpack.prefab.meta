@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: aaebdd18c09d5af448134c2906bf4682
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 267961
+  packageName: 'Starter Assets: Character Controllers | URP'
+  packageVersion: 2.0.2
+  assetPath: Assets/StarterAssets/ThirdPersonController/Prefabs/NestedParentCapsule_Unpack.prefab
+  uploadId: 721456

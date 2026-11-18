@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c11a3a5d799b32e4d8da829783cf1c90
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 267961
+  packageName: 'Starter Assets: Character Controllers | URP'
+  packageVersion: 2.0.2
+  assetPath: Assets/StarterAssets/Mobile/Prefabs/EventSystem/UI_EventSystem.prefab
+  uploadId: 721456
